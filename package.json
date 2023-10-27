@@ -1,0 +1,46 @@
+{
+  "name": "telegram.js",
+  "version": "0.0.0-beta.0.0.1",
+  "description": "A powerful and flexible framework for your Telegram bot!",
+  "types": "typescript/index.d.ts",
+  "main": "compile/index.js",
+  "files": [
+    "compile",
+    "source"
+  ],
+  "dependencies": {
+    "@discordjs/collection": "^1.5.3",
+    "@types/linkify-it": "^3.0.4",
+    "@types/web-bluetooth": "^0.0.19",
+    "axios": "^1.5.1",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "undici-types": "^5.25.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test:javascript": "node ./experimental/index.js",
+    "test:javascript-2": "tsc ./experimental-ts/index.ts && node ./experimental-ts/index.js",
+    "docs:dev": "vitepress dev website",
+    "docs:build": "vitepress build website",
+    "docs:preview": "vitepress preview website"
+  },
+  "keywords": [
+    "Telegram",
+    "API",
+    "Bot",
+    "Flexible",
+    "Framework"
+  ],
+  "author": "Vinzerr",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.8",
+    "bash-language-server": "^3.3.1",
+    "esbuild": "0.19.5",
+    "typescript": "^5.2.2",
+    "typescript-language-server": "^4.0.0",
+    "vitepress": "^1.0.0-rc.24",
+    "yarn": "^1.22.19"
+  }
+}

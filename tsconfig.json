@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": ["ESNext", "DOM"],
+    "target": "ES6",
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./typescript/**"],
+    "newLine": "lf",
+
+    "outDir": "compile",
+    "declaration": true,
+    "declarationDir": "typescript"
+  },
+  "include": ["source/**/*.ts"],
+  "exclude": ["node_modules", "compile", "experimental", "experimental-ts", "website"]
+}
