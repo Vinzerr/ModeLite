@@ -8,7 +8,7 @@ export enum LogLevel {
 }
 
 export type LogMethods = 'debug'|'info'|'warn'|'error'
-export default class Logger {
+export class Logger {
 
     public level: LogLevel
     constructor(level: LogLevel|undefined = LogLevel.Debug){

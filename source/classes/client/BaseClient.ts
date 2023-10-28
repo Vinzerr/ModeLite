@@ -1,7 +1,4 @@
-import { type APIOptions } from '../manager/APIManager'
-import { type PollOptions } from '../manager/PollManager'
-import { LogLevel } from '../Logger'
-import Base from '../Base'
+import { type APIOptions, type PollOptions, LogLevel, Base } from '../../index'
 
 export enum PartialTypes {
     Channel
@@ -23,7 +20,7 @@ export interface ClientOptions {
     poll?: PollOptions
 }
 
-export default class BaseClient extends Base {
+export class BaseClient extends Base {
 
     public options: ClientOptions
     public constructor(options: ClientOptions){

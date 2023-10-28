@@ -1,6 +1,6 @@
-import DataManager from './DataManager'
+import { DataManager } from '../../index'
 
-export default class CachedManager<HoldType> extends DataManager {
+export class CachedManager<HoldType> extends DataManager {
 
     public constructor(client: any, holds: HoldType, iterable?: any[]){
         super(client, holds)

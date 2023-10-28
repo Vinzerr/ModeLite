@@ -1,6 +1,9 @@
-import { BasePacket as BaseChatPacket, MessagePayloadMethod } from './BaseChat'
-import Client from '../client/Client'
-import Structure from './Structure'
+import {
+    Client,
+    Structure,
+    MessagePayloadMethod,
+    type BasePacket as BaseChatPacket,
+} from '../../index'
 
 export interface Entity {
     type: string
@@ -12,7 +15,7 @@ export interface Entity {
     custom_emoji_id: string
 }
 
-export interface MesssagePacket {
+export interface MessagePacket {
     message_id: string
     data: number
     chat: BaseChatPacket
@@ -49,7 +52,7 @@ export interface MessagePayload {
     params?: any
 }
 
-export default class Message extends Structure implements Partial<MesssagePacket> {
+export class Message extends Structure implements Partial<MessagePacket> {
 
     public message_id?: string
     public date?: number
@@ -57,12 +60,12 @@ export default class Message extends Structure implements Partial<MesssagePacket
     public entities?: Array<Entity>
     public from?: UserPacket
 
-    constructor(client: Client, packet: MesssagePacket){
+    constructor(client: Client, packet: MessagePacket){
         super(client)
         this._patch(packet)
     }
 
-    public override _patch(packet: MesssagePacket): void {
+    public override _patch(packet: MessagePacket): void {
         this.defaults(packet)
     }
 

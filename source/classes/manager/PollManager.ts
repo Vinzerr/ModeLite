@@ -1,5 +1,4 @@
-import BaseManager from './BaseManager'
-import Client from '../client/Client'
+import { BaseManager, Client } from '../../index'
 
 export type AllowedUpdates = 'message'|'edited_message'|'channel_post'|'edited_channel_post'|'my_chat_member'|'chat_member'
 export interface PollOptions {
@@ -9,7 +8,7 @@ export interface PollOptions {
     delay?: number
 }
 
-export default class PollManager extends BaseManager<PollOptions> {
+export class PollManager extends BaseManager<PollOptions> {
 
     public active: boolean = false
     public offset?: number

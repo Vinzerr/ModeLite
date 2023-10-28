@@ -1,6 +1,5 @@
 /// <reference types="node" />
-import BaseManager from './BaseManager';
-import Client from '../client/Client';
+import { BaseManager, Client } from '../../index';
 export type AllowedUpdates = 'message' | 'edited_message' | 'channel_post' | 'edited_channel_post' | 'my_chat_member' | 'chat_member';
 export interface PollOptions {
     limit: number;
@@ -8,7 +7,7 @@ export interface PollOptions {
     allow_updates: Array<AllowedUpdates>;
     delay?: number;
 }
-export default class PollManager extends BaseManager<PollOptions> {
+export declare class PollManager extends BaseManager<PollOptions> {
     active: boolean;
     offset?: number;
     interluder?: NodeJS.Timeout;

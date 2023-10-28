@@ -1,8 +1,9 @@
-import { UserPacket } from './Message'
-
-import MembersManager from '../manager/MembersManager'
-import Structure from './Structure'
-import Client from '../client/Client'
+import {
+    Client,
+    MembersManager,
+    Structure,
+    type UserPacket
+} from '../../index'
 
 export interface MemberPacket {
     status?: string
@@ -11,7 +12,7 @@ export interface MemberPacket {
     custom_title?: string
 }
 
-export default class Member extends Structure implements Partial<MemberPacket> {
+export class Member extends Structure implements Partial<MemberPacket> {
 
     public manager: MembersManager
     public status?: string

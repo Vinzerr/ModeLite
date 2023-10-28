@@ -1,6 +1,4 @@
-import { BasePacket as BaseChatPacket, MessagePayloadMethod } from './BaseChat';
-import Client from '../client/Client';
-import Structure from './Structure';
+import { Client, Structure, MessagePayloadMethod, type BasePacket as BaseChatPacket } from '../../index';
 export interface Entity {
     type: string;
     offset: number;
@@ -10,7 +8,7 @@ export interface Entity {
     language: string;
     custom_emoji_id: string;
 }
-export interface MesssagePacket {
+export interface MessagePacket {
     message_id: string;
     data: number;
     chat: BaseChatPacket;
@@ -44,14 +42,14 @@ export interface MessagePayload {
     advanced?: any;
     params?: any;
 }
-export default class Message extends Structure implements Partial<MesssagePacket> {
+export declare class Message extends Structure implements Partial<MessagePacket> {
     message_id?: string;
     date?: number;
     chat?: BaseChatPacket;
     entities?: Array<Entity>;
     from?: UserPacket;
-    constructor(client: Client, packet: MesssagePacket);
-    _patch(packet: MesssagePacket): void;
+    constructor(client: Client, packet: MessagePacket);
+    _patch(packet: MessagePacket): void;
     reply(pointer: MessagePayloadMethod | undefined, options: MessagePayload | string, path_to_file?: string): Promise<Message>;
     get command(): boolean | undefined;
     get member(): any;

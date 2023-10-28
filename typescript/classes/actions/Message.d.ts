@@ -1,6 +1,4 @@
-import GenericAction from './Generic';
-import Message, { MesssagePacket } from '../structures/Message';
-import { Parseables } from '../client/BaseClient';
+import { GenericAction, Message, Parseables, type MessagePacket } from '../../index';
 export declare enum Unsupported {
     ignore_first = "ignore_first"
 }
@@ -46,8 +44,8 @@ export declare enum Service {
     animation = "animation",
     text = "message"
 }
-export default class MessageAction extends GenericAction {
-    handle(packet: Partial<MesssagePacket>, parse?: boolean): Message | null;
+export declare class MessageAction extends GenericAction {
+    handle(packet: Partial<MessagePacket>, parse?: boolean): Message | null;
     parse(message: Message): Message;
     get parsable(): (option: Parseables) => boolean | undefined;
 }

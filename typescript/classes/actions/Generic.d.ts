@@ -1,6 +1,5 @@
-import { PartialTypes } from '../client/BaseClient';
-import Client from '../client/Client';
-export default class GenericAction {
+import { Client, PartialTypes } from '../../index';
+export declare class GenericAction {
     client: Client;
     constructor(client: Client);
     handle(packet: any): any;

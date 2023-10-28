@@ -1,7 +1,9 @@
-import { PartialTypes } from '../client/BaseClient'
-import Client from '../client/Client'
+import {
+    Client,
+    PartialTypes
+} from '../../index'
 
-export default class GenericAction {
+export class GenericAction {
 
     public client: Client
     public constructor(client: Client){

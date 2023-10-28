@@ -1,3 +1,3 @@
-import BaseGroupChat from './BaseGroupChat';
-export default class SuperGroupChat extends BaseGroupChat {
+import { BaseGroupChat } from './BaseGroupChat';
+export declare class SuperGroupChat extends BaseGroupChat {
 }

@@ -1,13 +1,11 @@
-import Client from '../client/Client';
-import BaseChat, { type BasePacket } from './BaseChat';
-import MembersManager from '../manager/MembersManager';
+import { Client, BaseChat, MembersManager, type BasePacket } from '../../index';
 export interface BaseGroupPacket extends BasePacket {
     title?: string;
     username?: string;
     active_usernames?: Array<string>;
     can_set_sticker_set?: boolean;
 }
-export default class BaseGroupChat extends BaseChat {
+export declare class BaseGroupChat extends BaseChat {
     members: MembersManager;
     constructor(client: Client, packet: BaseGroupPacket);
 }

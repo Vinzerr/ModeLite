@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "telegram.js"
+  name: "ModuLite"
   text: "A powerful and flexible framework for your Telegram bot."
   tagline: Simplicity at its finest.
   actions:

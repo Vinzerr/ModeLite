@@ -1,6 +1,9 @@
-import GenericAction from './Generic'
-import Message, { MesssagePacket } from '../structures/Message'
-import { Parseables } from '../client/BaseClient'
+import {
+    GenericAction,
+    Message,
+    Parseables,
+    type MessagePacket
+} from '../../index'
 
 export enum Unsupported {
     ignore_first = 'ignore_first',
@@ -49,8 +52,8 @@ export enum Service {
     text = 'message'
 }
 
-export default class MessageAction extends GenericAction {
-    public override handle(packet: Partial<MesssagePacket>, parse: boolean = true ): Message|null {
+export class MessageAction extends GenericAction {
+    public override handle(packet: Partial<MessagePacket>, parse: boolean = true ): Message|null {
         const partial_chat = this.partials.channel(packet.chat)
         if(partial_chat){
             const existing = partial_chat.messages.cache.get(packet.message_id)

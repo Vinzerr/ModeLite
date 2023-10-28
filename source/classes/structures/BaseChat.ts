@@ -1,9 +1,12 @@
-import Message, { MessagePayload } from './Message'
-import { createReadStream } from 'fs'
 import FormData = require('form-data')
-import MessagesManager from '../manager/MessagesManager'
-import Client from '../client/Client'
-import Structure from './Structure'
+import { createReadStream } from 'fs'
+import {
+    Client,
+    Message,
+    MessagesManager,
+    Structure,
+    type MessagePayload
+} from '../../index'
 
 export type ChatType = 'private'|'supergroup'|'group'|'channel'
 export interface BasePacket {
@@ -29,7 +32,7 @@ export enum MessagePayloadMethod {
     photo = 'sendPhoto'
 }
 
-export default class BaseChat extends Structure implements Partial<BasePacket> {
+export class BaseChat extends Structure implements Partial<BasePacket> {
 
     public id?: number
     public partial: boolean = true

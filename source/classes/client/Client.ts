@@ -1,11 +1,14 @@
-import BaseClient, { type ClientOptions } from './BaseClient'
-import ChatsManager from '../manager/ChatsManager'
-import ActionsManager from '../manager/ActionsManager'
-import APIManager from '../manager/APIManager'
-import PollManager from '../manager/PollManager'
-import Logger from '../Logger';
+import {
+    ActionsManager,
+    APIManager,
+    BaseClient,
+    ChatsManager,
+    Logger,
+    PollManager,
+    type ClientOptions
+} from '../../index'
 
-export default class Client extends BaseClient {
+export class Client extends BaseClient {
 
     public logger: Logger
     public api: APIManager

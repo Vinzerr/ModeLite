@@ -1,7 +1,5 @@
-import CachedManager from './CachedManager';
-import BaseGroupChat from '../structures/BaseGroupChat';
-import Member from '../structures/Member';
-export default class MembersManager extends CachedManager<typeof Member> {
+import { CachedManager, BaseGroupChat, Member } from '../../index';
+export declare class MembersManager extends CachedManager<typeof Member> {
     chat: InstanceType<typeof BaseGroupChat>;
     constructor(chat: InstanceType<typeof BaseGroupChat>);
     ban(user_id: number, { until_date, revoke_messages }?: any): Promise<boolean>;

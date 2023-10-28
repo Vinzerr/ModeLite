@@ -1,4 +1,4 @@
-const { Client } = require('telegram.js')
+const { Client } = require('modulite')
 
 const client = new Client({
     tes: 'test'

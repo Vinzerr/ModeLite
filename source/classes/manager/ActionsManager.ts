@@ -1,7 +1,6 @@
-import BaseManager from './BaseManager'
-import Client from '../client/Client'
+import { Client, BaseManager } from '../../index'
 
-export default class ActionsManager extends BaseManager {
+export class ActionsManager extends BaseManager {
 
     [key: string]: any
     public constructor(client: Client){

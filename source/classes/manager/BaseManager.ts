@@ -1,7 +1,6 @@
-import { Client } from '../../index'
-import Base from '../Base'
+import { Client, Base } from '../../index'
 
-export default class BaseManager<OptionType = void> extends Base {
+export class BaseManager<OptionType = void> extends Base {
 
     public client: Client
     public options: OptionType

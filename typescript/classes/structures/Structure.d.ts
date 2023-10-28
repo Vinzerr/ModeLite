@@ -1,5 +1,5 @@
-import Client from '../client/Client';
-export default class Structure {
+import { Client } from '../../index';
+export declare class Structure {
     client: Client;
     constructor(client: Client);
     _patch(packet: unknown): unknown;

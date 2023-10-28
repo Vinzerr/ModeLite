@@ -1,5 +1,5 @@
-import BaseGroupChat from './BaseGroupChat'
+import { BaseGroupChat } from './BaseGroupChat'
 
-export default class ChannelChat extends BaseGroupChat {
+export class ChannelChat extends BaseGroupChat {
 
 }

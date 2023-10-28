@@ -1,7 +1,4 @@
-import Message from './Message';
-import MessagesManager from '../manager/MessagesManager';
-import Client from '../client/Client';
-import Structure from './Structure';
+import { Client, Message, MessagesManager, Structure } from '../../index';
 export type ChatType = 'private' | 'supergroup' | 'group' | 'channel';
 export interface BasePacket {
     type: ChatType;
@@ -24,7 +21,7 @@ export declare enum MessagePayloadMethod {
     action = "sendChatAction",
     photo = "sendPhoto"
 }
-export default class BaseChat extends Structure implements Partial<BasePacket> {
+export declare class BaseChat extends Structure implements Partial<BasePacket> {
     id?: number;
     partial: boolean;
     last_message_id?: number;

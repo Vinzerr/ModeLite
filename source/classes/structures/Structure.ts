@@ -1,6 +1,8 @@
-import Client from '../client/Client'
+import {
+    Client
+} from '../../index'
 
-export default class Structure {
+export class Structure {
 
     public client: Client
     public constructor(client: Client){

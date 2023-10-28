@@ -1,6 +1,4 @@
-import CachedManager from './CachedManager';
-import Message from '../structures/Message';
-import Client from '../client/Client';
-export default class MessagesManager extends CachedManager<typeof Message> {
+import { CachedManager, Message, Client } from '../../index';
+export declare class MessagesManager extends CachedManager<typeof Message> {
     constructor(client: Client);
 }

@@ -1,8 +1,10 @@
-import CachedManager from './CachedManager'
-import BaseGroupChat from '../structures/BaseGroupChat'
-import Member from '../structures/Member'
+import { 
+    CachedManager, 
+    BaseGroupChat, 
+    Member 
+} from '../../index'
 
-export default class MembersManager extends CachedManager<typeof Member> {
+export class MembersManager extends CachedManager<typeof Member> {
     
     public chat: InstanceType<typeof BaseGroupChat>
     public constructor(chat: InstanceType<typeof BaseGroupChat>){

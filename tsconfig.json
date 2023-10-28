@@ -10,7 +10,7 @@
     "baseUrl": ".",
     "typeRoots": ["./node_modules/@types", "./typescript/**"],
     "newLine": "lf",
-
+    "rootDir": "source",
     "outDir": "compile",
     "declaration": true,
     "declarationDir": "typescript"

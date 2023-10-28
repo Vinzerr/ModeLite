@@ -1,5 +1,4 @@
-import BaseManager from './BaseManager';
-import Client from '../client/Client';
+import { BaseManager, Client } from '../../index';
 export interface APIOptions {
     base: string;
     token?: string | undefined;
@@ -10,7 +9,7 @@ export interface RequestOptions {
     lean?: boolean;
 }
 export type AxiosMethod = 'get' | 'post';
-export default class APIManager extends BaseManager<APIOptions> {
+export declare class APIManager extends BaseManager<APIOptions> {
     [key: string]: any;
     constructor(client: Client);
     acknowledge(method: string): void;

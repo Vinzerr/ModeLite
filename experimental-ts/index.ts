@@ -1,5 +1,4 @@
-import { Client, LogLevel, PartialTypes } from 'telegram.js'
-import * as path from 'path'
+import { Client, LogLevel, PartialTypes } from 'modulite'
 
 const client = new Client({
     logger: {

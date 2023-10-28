@@ -1,6 +1,4 @@
-import Client from '../client/Client'
-import CachedManager from './CachedManager'
-import BaseChat from '../structures/BaseChat'
+import { Client, CachedManager, BaseChat } from '../../index'
 
 export enum ChatHold {
     channel = require('../structures/ChannelChat').default,
@@ -9,7 +7,7 @@ export enum ChatHold {
     supergroup = require('../structures/SuperGroupChat').default
 }
 
-export default class ChatsManager extends CachedManager<typeof BaseChat> {
+export class ChatsManager extends CachedManager<typeof BaseChat> {
 
     public constructor(client: Client){
         super(client, BaseChat)

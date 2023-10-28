@@ -7,7 +7,7 @@ export declare enum LogLevel {
     None = 100
 }
 export type LogMethods = 'debug' | 'info' | 'warn' | 'error';
-export default class Logger {
+export declare class Logger {
     level: LogLevel;
     constructor(level?: LogLevel | undefined);
     debug(...argumants: any[]): void;

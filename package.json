@@ -1,12 +1,13 @@
 {
-  "name": "telegram.js",
+  "name": "modulite",
   "version": "0.0.0-beta.0.0.1",
   "description": "A powerful and flexible framework for your Telegram bot!",
-  "types": "typescript/index.d.ts",
-  "main": "compile/index.js",
+  "types": "./typescript/index.d.ts",
+  "main": "./compile/index.js",
   "files": [
     "compile",
-    "source"
+    "source",
+    "typescript"
   ],
   "dependencies": {
     "@discordjs/collection": "^1.5.3",
@@ -19,6 +20,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "link": "npm link telegram.js@npm:@vinzer",
     "test:javascript": "node ./experimental/index.js",
     "test:javascript-2": "tsc ./experimental-ts/index.ts && node ./experimental-ts/index.js",
     "docs:dev": "vitepress dev website",

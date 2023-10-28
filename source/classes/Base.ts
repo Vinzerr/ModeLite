@@ -1,6 +1,6 @@
 import { EventEmitter } from "node:events"
 
-export default class Base extends EventEmitter {
+export class Base extends EventEmitter {
 
     public constructor(){
         super({ captureRejections: true })

@@ -1,5 +1,5 @@
-import BaseChat from './BaseChat'
+import { BaseChat } from './BaseChat'
 
-export default class PrivateChat extends BaseChat {
+export class PrivateChat extends BaseChat {
     
 }
