@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "telegram.js",
-  base: '/telegram.js/',
+  title: "ModuLite",
+  base: '/modulite/',
   description: "A powerful and flexible framework for your Telegram bot.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

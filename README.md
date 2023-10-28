@@ -13,7 +13,7 @@ Import, configure, and compile. As easy as that!
 Start creating your bot today!
 
 ```bash
-npm install telegram.js
+npm install modulite
 ```
 
 ### Basic Setup
